@@ -13,7 +13,7 @@
 
 @layer components {
   .btn {
-    @apply py-3 px-6 flex font-medium border-2 border-transparent items-center cursor-pointer justify-center min-w-[150px] rounded-xl transition-colors duration-300;
+    @apply py-3 px-6 w-full sm:w-auto flex font-medium border-2 border-transparent items-center cursor-pointer justify-center  min-w-[150px] rounded-xl transition-colors duration-300;
   }
 
   .btn-primary {
