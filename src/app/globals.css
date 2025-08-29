@@ -9,6 +9,14 @@
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
   --color-dark-text: #33324a;
+  --color-main-background: #f9f9ff;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 @layer components {
@@ -37,4 +45,12 @@
       rgba(0, 161, 241, 0.5) 100.31%
     ),
     #f9f9ff;
+}
+
+.linear-background-marquee {
+  background: linear-gradient(
+    to bottom,
+    rgba(249, 249, 255, 0) 48%,
+    /* transparent top half */ #00a1f1 128.54% /* solid blue at bottom */
+  );
 }
