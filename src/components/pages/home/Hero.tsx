@@ -32,13 +32,17 @@ const Hero = () => {
             innovation and success.
           </p>
           <div className="mt-[52px] flex sm:flex-row flex-col md:items-center gap-6">
-            <Link className="btn btn-primary" href={"#"}>
+            <Link className="btn btn-primary" href="#clients" scroll={true}>
               Clients
-            </Link>{" "}
+            </Link>
             <span className="text-xl text-center">or</span>
-            <Link className="btn btn-secondary" href={"#"}>
+            <Link
+              className="btn btn-secondary"
+              href="#candidates"
+              scroll={true}
+            >
               Candidates
-            </Link>{" "}
+            </Link>
           </div>
         </div>
         <div className="flex-1 lg:self-start w-full h-full self-end">
