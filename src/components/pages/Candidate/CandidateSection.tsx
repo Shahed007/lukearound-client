@@ -5,7 +5,7 @@ import SuccessStories from '../home/successStories/successStories';
 
 const CandidateSection = () => {
 	return (
-		<div>
+		<div className='bg-white'>
 			<EmployerBrandingSection/>
 			<LiveOpportunities/>
 			<SuccessStories/>

@@ -1,6 +1,11 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 import image1 from "@/assets/success/1.jpg";
 import image2 from "@/assets/success/2.jpg";
 import image3 from "@/assets/success/3.jpg";
@@ -47,10 +52,7 @@ const successStories: SuccessStory[] = [
   },
 ];
 
-const SuccessStoryCard: React.FC<{
-  story: SuccessStory;
-  isActive: boolean;
-}> = ({ story, isActive }) => {
+const SuccessStoryCard: React.FC<{ story: SuccessStory }> = ({ story }) => {
   const cardClasses = {
     light: "bg-white border border-gray-200 text-slate-900",
     dark: "bg-slate-800 text-white",
@@ -67,9 +69,8 @@ const SuccessStoryCard: React.FC<{
     <div
       className={`
         ${cardClasses[story.cardStyle]} 
-        rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300
+        rounded-2xl transition-all duration-300
         overflow-hidden
-        ${isActive ? "ring-2 ring-slate-800" : ""}
       `}
     >
       {/* Image */}
@@ -112,10 +113,8 @@ const SuccessStoryCard: React.FC<{
 };
 
 const SuccessStories: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
-
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -128,35 +127,29 @@ const SuccessStories: React.FC = () => {
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {successStories.map((story, index) => (
-            <SuccessStoryCard
-              key={story.id}
-              story={story}
-              isActive={index === activeIndex}
-            />
+        {/* Swiper */}
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={24}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination", // Use custom pagination container
+          }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {successStories.map((story) => (
+            <SwiperSlide key={story.id}>
+              <SuccessStoryCard story={story} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
 
         {/* Pagination Dots */}
-        <div className="flex justify-center space-x-3">
-          {successStories.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`
-                w-3 h-3 rounded-full transition-all duration-300
-                ${
-                  index === activeIndex
-                    ? "bg-slate-800 scale-125"
-                    : "bg-gray-300 hover:bg-gray-400"
-                }
-              `}
-              aria-label={`Go to story ${index + 1}`}
-            />
-          ))}
-        </div>
+        <div className="custom-pagination flex justify-center mt-6"></div>
       </div>
     </section>
   );
