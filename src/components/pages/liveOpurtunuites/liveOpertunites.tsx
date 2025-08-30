@@ -4,7 +4,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/pagination";// We'll create this CSS file
 
 const opportunities = [
   {
@@ -102,111 +102,149 @@ export default function LiveOpportunities() {
         </p>
       </div>
 
-      {/* Swiper Slider */}
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        spaceBetween={24}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 4000 }}
-        breakpoints={{
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-      >
-        {opportunities.map((opportunity) => (
-          <SwiperSlide key={opportunity.id}>
-            <div
-              className={`rounded-2xl p-6 transition-all duration-300 hover:shadow-lg flex flex-col h-full ${
-                opportunity.featured
-                  ? "bg-slate-800 text-white shadow-lg"
-                  : "bg-white border border-gray-200 shadow-sm"
-              }`}
-            >
-              {/* Header with badges */}
-              <div className="flex items-center justify-between mb-6">
-                <span
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${
-                    opportunity.featured
-                      ? "bg-slate-700 text-slate-200 border border-slate-600"
-                      : "bg-slate-800 text-white"
-                  }`}
-                >
-                  {opportunity.location.split(" - ")[1] || opportunity.location}
-                </span>
-                <span
-                  className={`text-sm ${
-                    opportunity.featured ? "text-slate-300" : "text-gray-500"
-                  }`}
-                >
-                  {opportunity.timeAgo}
-                </span>
-              </div>
-
-              {/* Job Title */}
-              <h3
-                className={`text-2xl font-bold mb-2 ${
-                  opportunity.featured ? "text-white" : "text-slate-900"
-                }`}
-              >
-                {opportunity.title}
-              </h3>
-
-              {/* Company and Salary */}
+      {/* Swiper Slider with custom styling */}
+      <div className="pb-16 relative">
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={24}
+          pagination={{
+            clickable: true,
+            el: '.custom-pagination',
+            bulletClass: 'custom-bullet',
+            bulletActiveClass: 'custom-bullet-active',
+          }}
+          autoplay={{ delay: 4000 }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="pb-10" // Added padding for space between cards and pagination
+        >
+          {opportunities.map((opportunity) => (
+            <SwiperSlide key={opportunity.id}>
               <div
-                className={`text-lg mb-6 ${
-                  opportunity.featured ? "text-slate-200" : "text-slate-700"
+                className={`rounded-2xl p-6 transition-all duration-300 hover:shadow-lg flex flex-col h-full ${
+                  opportunity.featured
+                    ? "bg-slate-800 text-white shadow-lg"
+                    : "bg-white border border-gray-200 shadow-sm"
                 }`}
               >
-                <div className="font-semibold">{opportunity.company}</div>
-                <div
-                  className={`text-base ${
-                    opportunity.featured ? "text-slate-300" : "text-gray-600"
+                {/* Header with badges */}
+                <div className="flex items-center justify-between mb-6">
+                  <span
+                    className={`px-4 py-2 rounded-full text-sm font-medium ${
+                      opportunity.featured
+                        ? "bg-slate-700 text-slate-200 border border-slate-600"
+                        : "bg-slate-800 text-white"
+                    }`}
+                  >
+                    {opportunity.location.split(" - ")[1] || opportunity.location}
+                  </span>
+                  <span
+                    className={`text-sm ${
+                      opportunity.featured ? "text-slate-300" : "text-gray-500"
+                    }`}
+                  >
+                    {opportunity.timeAgo}
+                  </span>
+                </div>
+
+                {/* Job Title */}
+                <h3
+                  className={`text-2xl font-bold mb-2 ${
+                    opportunity.featured ? "text-white" : "text-slate-900"
                   }`}
                 >
-                  {opportunity.salary}
-                </div>
-              </div>
+                  {opportunity.title}
+                </h3>
 
-              {/* Description */}
-              <p
-                className={`text-base mb-6 leading-relaxed ${
-                  opportunity.featured ? "text-slate-200" : "text-gray-600"
-                }`}
-              >
-                {opportunity.description}
-              </p>
-
-              {/* Skills */}
-              <div className="mb-6 flex-grow">
-                <div className="flex flex-wrap gap-2">
-                  {opportunity.skills.map((skill, index) => (
-                    <span
-                      key={index}
-                      className={`px-3 py-1 rounded-lg text-sm ${
-                        opportunity.featured
-                          ? "bg-slate-700 text-slate-200"
-                          : "bg-gray-100 text-gray-700"
-                      }`}
-                    >
-                      • {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Apply Button */}
-              <div className="mt-auto">
-                <button
-                  className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105 ${opportunity.buttonStyle}`}
+                {/* Company and Salary */}
+                <div
+                  className={`text-lg mb-6 ${
+                    opportunity.featured ? "text-slate-200" : "text-slate-700"
+                  }`}
                 >
-                  {opportunity.buttonText}
-                </button>
+                  <div className="font-semibold">{opportunity.company}</div>
+                  <div
+                    className={`text-base ${
+                      opportunity.featured ? "text-slate-300" : "text-gray-600"
+                    }`}
+                  >
+                    {opportunity.salary}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p
+                  className={`text-base mb-6 leading-relaxed ${
+                    opportunity.featured ? "text-slate-200" : "text-gray-600"
+                  }`}
+                >
+                  {opportunity.description}
+                </p>
+
+                {/* Skills */}
+                <div className="mb-6 flex-grow">
+                  <div className="flex flex-wrap gap-2">
+                    {opportunity.skills.map((skill, index) => (
+                      <span
+                        key={index}
+                        className={`px-3 py-1 rounded-lg text-sm ${
+                          opportunity.featured
+                            ? "bg-slate-700 text-slate-200"
+                            : "bg-gray-100 text-gray-700"
+                        }`}
+                      >
+                        • {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Apply Button */}
+                <div className="mt-auto">
+                  <button
+                    className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105 ${opportunity.buttonStyle}`}
+                  >
+                    {opportunity.buttonText}
+                  </button>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        
+        {/* Custom pagination container with spacing */}
+        <div className="custom-pagination mt-8 flex justify-center gap-2" />
+      </div>
+
+
+      <style>{`
+  .custom-bullet {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #cbd5e1;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-bullet-active {
+    background-color: #1e293b;
+    width: 30px;
+    border-radius: 8px;
+  }
+  
+  .custom-pagination {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+  }
+`}</style>
     </section>
   );
 }
