@@ -39,13 +39,13 @@ export default function TechnologyIntelligence() {
   ];
 
   return (
-    <section className="bg-slate-800 text-white py-16 px-6">
+    <section className="bg-slate-800 text-white py-16 px-6 mb-10">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-5xl font-bold text-balance">
+              <h1 className="text-4xl lg:text-5xl font-bold">
                 Technology & Intelligence
               </h1>
               <p className="text-lg text-slate-300">
@@ -53,7 +53,7 @@ export default function TechnologyIntelligence() {
               </p>
             </div>
 
-            <div className="bg-white text-slate-900 p-8 rounded-2xl shadow-lg">
+            <div className="bg-white text-slate-900 p-8 rounded-xl shadow-md">
               <h2 className="text-xl font-semibold mb-6">What we provide:</h2>
               <ul className="space-y-4">
                 {services.map((service, index) => (
@@ -81,17 +81,17 @@ export default function TechnologyIntelligence() {
           </div>
 
           {/* Right Content - Company Logos Grid */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 gap-4">
             {companyLogos.map((company, index) => (
               <div
                 key={index}
-                className="bg-slate-700 p-3 rounded-lg flex items-center justify-center h-16 shadow-md hover:shadow-lg transition-shadow duration-200"
+                className="bg-white rounded-lg flex items-center justify-center h-20 shadow-sm hover:shadow-md transition-all duration-200"
               >
                 <Image
                   src={company.logo}
                   alt={`${company.name} logo`}
-                  width={80}
-                  height={40}
+                  width={120}
+                  height={60}
                   className="object-contain"
                 />
               </div>
