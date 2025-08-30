@@ -6,6 +6,10 @@ import "swiper/css"
 import "swiper/css/pagination"
 import Image from "next/image"
 
+import image1 from "@/assets/testimonial/Image1.png"
+import image2 from "@/assets/testimonial/Image2.png"
+import image3 from "@/assets/testimonial/Image3.png"
+
 const testimonials = [
   {
     id: 1,
@@ -13,7 +17,7 @@ const testimonials = [
     title: "CTO, Tec Flow Solutions",
     content:
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words don't look even slightly believable.",
-    avatar: "/professional-dark-haired-man.png",
+    avatar: image1,
   },
   {
     id: 2,
@@ -21,7 +25,7 @@ const testimonials = [
     title: "VP HR, Innovate Now",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    avatar: "/professional-blonde-woman.png",
+    avatar: image2,
   },
   {
     id: 3,
@@ -29,7 +33,7 @@ const testimonials = [
     title: "Founder, Startup Lab",
     content:
       "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-    avatar: "/professional-man-glasses.png",
+    avatar: image3,
   },
   {
     id: 4,
@@ -37,7 +41,7 @@ const testimonials = [
     title: "Product Manager, Bright Future Inc.",
     content:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    avatar: "/professional-dark-haired-woman.png",
+    avatar: image2,
   },
   {
     id: 5,
@@ -45,7 +49,7 @@ const testimonials = [
     title: "CEO, NextGen Tech",
     content:
       "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English.",
-    avatar: "/professional-bald-man.png",
+    avatar: image3,
   },
   {
     id: 6,
@@ -53,7 +57,7 @@ const testimonials = [
     title: "Head of Marketing, Creative Minds",
     content:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.",
-    avatar: "/professional-brunette-woman.png",
+    avatar: image1,
   },
   {
     id: 7,
@@ -61,7 +65,7 @@ const testimonials = [
     title: "Lead Developer, CodeCrafters",
     content:
       "There are countless variations of Lorem Ipsum passages, all generated randomly, ensuring the text is never the same twice.",
-    avatar: "/professional-man-beard.png",
+    avatar: image3,
   },
   {
     id: 8,
@@ -69,7 +73,7 @@ const testimonials = [
     title: "UX Designer, Pixel Perfect",
     content:
       "Using Lorem Ipsum helps to focus on the design elements rather than the content itself.",
-    avatar: "/professional-woman-glasses.png",
+    avatar: image2,
   },
   {
     id: 9,
@@ -77,7 +81,7 @@ const testimonials = [
     title: "CTO, CloudWorks",
     content:
       "Lorem Ipsum has been used for centuries, providing a filler text that helps designers visualize layouts.",
-    avatar: "/professional-man-curly.png",
+    avatar: image1,
   },
   {
     id: 10,
@@ -85,18 +89,18 @@ const testimonials = [
     title: "HR Manager, Global Ventures",
     content:
       "Even though it looks like readable English, Lorem Ipsum is actually scrambled Latin, making it perfect for placeholder text.",
-    avatar: "/professional-woman-short.png",
+    avatar: image3,
   },
 ]
 
 
 export default function TestimonialsCarousel() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10 mb-10">
+    <section className="max-w-7xl mx-auto px-4 py-10 mt-20 mb-10">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 max-w-6xl mx-auto">
           Don&#39;t just take our word for it. Here&#39;s what our partners have to say about working with us.
         </p>
       </div>
@@ -162,13 +166,13 @@ export default function TestimonialsCarousel() {
                 </div>
 
                 {/* Profile image positioned outside the card */}
-                <div className="relative bottom-4 left-8 mb-4">
-                  <div className="w-12 h-12 rounded-full border-4 border-white overflow-hidden bg-gray-200">
+                <div className="relative bottom-10 left-8 mb-4">
+                  <div className="w-20 h-20 rounded-full border-4 border-white overflow-hidden bg-gray-200">
                     <Image
                       src={testimonial.avatar || "/placeholder.svg"}
                       alt={testimonial.name}
-                      width={48}
-                      height={48}
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                   </div>

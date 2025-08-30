@@ -1,3 +1,9 @@
+import React from "react"
+import Image from "next/image"
+import ico1 from "@/assets/ico/Group.png"
+import ico2 from "@/assets/ico/Group 2.png"
+import ico3 from "@/assets/ico/Group 3.png"
+
 export default function HowItWorks() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-10 mt-6 mb-3">
@@ -15,11 +21,7 @@ export default function HowItWorks() {
         <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <div className="mb-6">
             <div className="w-16 h-16 mx-auto mb-4">
-              <svg viewBox="0 0 64 64" className="w-full h-full">
-                <circle cx="32" cy="32" r="28" fill="#1e40af" />
-                <path d="M32 8 L32 32 L50 40 A28 28 0 0 0 32 8" fill="#ef4444" />
-                <path d="M32 32 L14 24 A28 28 0 0 0 32 60 L32 32" fill="#64748b" />
-              </svg>
+              <Image src={ico1} alt="Discovery & Analysis Icon" className="w-full h-full" />
             </div>
           </div>
 
@@ -53,19 +55,7 @@ export default function HowItWorks() {
         <div className="bg-slate-800 rounded-2xl p-8 text-white hover:shadow-lg transition-shadow">
           <div className="mb-6">
             <div className="w-16 h-16 mx-auto mb-4">
-              <svg viewBox="0 0 64 64" className="w-full h-full">
-                <g fill="#ef4444">
-                  <circle cx="32" cy="20" r="6" />
-                  <circle cx="20" cy="35" r="5" />
-                  <circle cx="44" cy="35" r="5" />
-                  <path d="M32 28 L20 42 L44 42 Z" opacity="0.7" />
-                </g>
-                <g stroke="#ef4444" strokeWidth="2" fill="none">
-                  <path d="M32 26 L20 30" />
-                  <path d="M32 26 L44 30" />
-                  <path d="M20 40 L44 40" />
-                </g>
-              </svg>
+              <Image src={ico2} alt="Talent Sourcing Icon" className="w-full h-full" />
             </div>
           </div>
 
@@ -99,24 +89,7 @@ export default function HowItWorks() {
         <div className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-shadow">
           <div className="mb-6">
             <div className="w-16 h-16 mx-auto mb-4">
-              <svg viewBox="0 0 64 64" className="w-full h-full">
-                <path
-                  d="M20 35 L30 40 L50 25"
-                  stroke="#ef4444"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M15 40 Q15 35 20 35 L45 35 Q50 35 50 40 L50 50 Q50 55 45 55 L20 55 Q15 55 15 50 Z"
-                  fill="#1e40af"
-                  opacity="0.1"
-                  stroke="#1e40af"
-                  strokeWidth="2"
-                />
-                <circle cx="32" cy="20" r="8" fill="#ef4444" opacity="0.2" stroke="#ef4444" strokeWidth="2" />
-              </svg>
+              <Image src={ico3} alt="Vetting & Placement Icon" className="w-full h-full" />
             </div>
           </div>
 

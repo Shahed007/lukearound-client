@@ -1,14 +1,16 @@
 import Image from "next/image"
+import React from "react"
+import image from "@/assets/Rectangle 21.png"
 
 export default function EmployerBrandingSection() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="max-w-7xl mx-auto px-6 py-16">
+      <div className="grid lg:grid-cols-2 gap-12 items-center justify-between">
         {/* Image Section */}
         <div className="relative">
           <div className="rounded-2xl overflow-hidden">
             <Image
-              src="/images/professional-woman.png"
+              src={image}
               alt="Professional woman holding coffee cup"
               width={500}
               height={400}

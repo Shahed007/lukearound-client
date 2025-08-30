@@ -7,7 +7,7 @@ import TestimonialsCarousel from '../home/testimonial/Testimonial';
 
 const ClientSection = () => {
 	return (
-		<div>
+		<div className='bg-white mb-6'>
 			<WhatWeAre/>
 			<TechnologyIntelligence/>
 			<HowItWorks/>
