@@ -53,7 +53,7 @@ export default function TechnologyIntelligence() {
               </p>
             </div>
 
-            <div className="bg-white text-slate-900 p-8 rounded-xl shadow-md">
+            <div className="bg-[#D2D1D1] text-slate-900 p-8 rounded-xl shadow-md">
               <h2 className="text-xl font-semibold mb-6">What we provide:</h2>
               <ul className="space-y-4">
                 {services.map((service, index) => (
@@ -85,14 +85,14 @@ export default function TechnologyIntelligence() {
             {companyLogos.map((company, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg flex items-center justify-center h-20 shadow-sm hover:shadow-md transition-all duration-200"
+                className="bg-[#E9EAEB] rounded-lg flex items-center justify-center h-20 shadow-sm hover:shadow-md transition-all duration-200"
               >
                 <Image
                   src={company.logo}
                   alt={`${company.name} logo`}
-                  width={120}
-                  height={60}
-                  className="object-contain"
+                  width={90}
+                  height={50}
+                  className="object-cover"
                 />
               </div>
             ))}
