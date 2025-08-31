@@ -5,6 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 import Image from "next/image"
+import { motion, Variants } from "framer-motion"
 
 import image1 from "@/assets/testimonial/Image1.png"
 import image2 from "@/assets/testimonial/Image2.png"
@@ -93,6 +94,16 @@ const testimonials = [
   },
 ]
 
+// Type-safe Framer Motion Variants
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }, // cubic-bezier equivalent of easeOut
+  },
+}
 
 export default function TestimonialsCarousel() {
   return (
@@ -121,20 +132,22 @@ export default function TestimonialsCarousel() {
             disableOnInteraction: false,
           }}
           breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
           className="testimonials-swiper pb-12"
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="relative h-full">
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="relative h-full"
+              >
                 {/* Main testimonial card */}
-                <div className="bg-slate-800 rounded-2xl p-8 pb-12 text-white relative h-full min-h-[380px]">
+                <div className="bg-slate-800 rounded-2xl p-8 pb-12 text-white relative h-full min-h-[380px] shadow-lg">
                   {/* Stars */}
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
@@ -177,7 +190,7 @@ export default function TestimonialsCarousel() {
                     />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -194,10 +207,13 @@ export default function TestimonialsCarousel() {
           background: #cbd5e1 !important;
           opacity: 1 !important;
           margin: 0 4px !important;
+          border-radius: 9999px !important;
+          transition: all 0.3s ease-in-out;
         }
         
         .testimonial-bullet-active {
           background: #1e293b !important;
+          transform: scale(1.3);
         }
       `}</style>
     </section>

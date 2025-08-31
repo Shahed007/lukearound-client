@@ -4,11 +4,15 @@ import image1 from "@/assets/whatWeare/image-1.png";
 import image2 from "@/assets/whatWeare/image-2.png";
 import EllipsisText from "@/components/elipsisText/ElipsisText";
 import Image from "next/image";
+import Link from "next/link";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const WhatWeAre = () => {
   return (
-    <section className="py-[60px] md:py-[100px] bg-main-background">
+    <section
+      className="py-[60px] md:py-[100px] bg-main-background"
+      id="what-we-are"
+    >
       <div className="custom-container">
         {/* Mobile Layout */}
         <div className="block md:hidden">
@@ -67,9 +71,11 @@ const WhatWeAre = () => {
               text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
             />
             <div className="flex justify-center">
-              <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                Book A Call
-              </button>
+              <Link href={"#contact-us"} scroll={true}>
+                <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
+                  Book A Call
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -133,9 +139,11 @@ const WhatWeAre = () => {
                 text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
               />
               <div className="flex justify-end">
-                <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                  Book A Call
-                </button>
+                <Link href={"#contact-us"} scroll={true}>
+                  <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
+                    Book A Call
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
