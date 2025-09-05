@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 
 const navItems: { href: string; label: string }[] = [
-  { href: "/about-us", label: "About Us" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contact-us", label: "Contact Us" },
+  { href: "/#what-we-are", label: "About Us" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#contact-us", label: "Contact Us" },
 ];
 
 const Navbar = () => {
@@ -31,6 +31,7 @@ const Navbar = () => {
                       : "text-[#050505] hover:text-primary"
                   }`}
                   href={item.href}
+                  scroll={true}
                 >
                   {item.label}
                 </Link>
@@ -40,7 +41,7 @@ const Navbar = () => {
         </nav>
         <div className="flex items-center gap-6">
           <div className="sm:block hidden">
-            <Link href={"#"} className="btn btn-primary">
+            <Link href={"#contact-us"} scroll={true} className="btn btn-primary">
               Book A Call
             </Link>
           </div>

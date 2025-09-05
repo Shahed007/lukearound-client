@@ -1,13 +1,17 @@
 import MarqueeFlow from "@/components/marquee/Marquee";
+import CandidateSection from "@/components/pages/Candidate/CandidateSection";
+import ClientSection from "@/components/pages/Client/Client-Section";
+import { ContactForm } from "@/components/pages/contact-from/ContactPage";
 import Hero from "@/components/pages/home/Hero";
-import WhatWeAre from "@/components/pages/home/whatWeAre/WhatWeAre";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-white">
       <Hero />
       <MarqueeFlow />
-      <WhatWeAre />
+      <ClientSection />
+      <CandidateSection />
+      <ContactForm />
     </div>
   );
 }
