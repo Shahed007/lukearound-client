@@ -72,7 +72,7 @@ const Hero = () => {
   }, [controls, inView]);
 
   return (
-    <section className="xl:min-h-[76vh] py-20 xl:py-0 flex items-center overflow-hidden">
+    <section className="xl:min-h-[76vh] py-20 xl:py-0 flex items-center overflow-hidden bg-[#d2e7ec]">
       <div className="custom-container gap-10 flex lg:flex-row flex-col">
         <motion.div
           ref={ref}
@@ -83,7 +83,7 @@ const Hero = () => {
         >
           <div className="flex xl:mb-0 mb-5 gap-3">
             <motion.h2 variants={hiVariants} className="xl:text-[81px] text-[50px] font-poppins font-bold text-primary tracking-wide">
-              HI
+              Hi
             </motion.h2>
             <ul className="flex items-center gap-3 mt-11">
               {[0, 1, 2].map((i) => (
@@ -92,7 +92,7 @@ const Hero = () => {
                   custom={i}
                   variants={dotVariants}
                   whileHover="hover"
-                  className={`size-2 rounded-full ${i === 2 ? "bg-accent" : "bg-primary"}`}
+                  className="size-2 rounded-full bg-accent"
                 />
               ))}
             </ul>
@@ -109,7 +109,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p variants={itemVariants} className="sm:text-xl font-inter text-dark-text mt-6 mb-[52px]">
-            We bridge the gap between ambitious professionals and forward-thinking organizations, creating partnerships that drive innovation and success.
+            You wouldn’t let a tourist lead your expedition. So why let a recruiter hire your specialist? Let someone who’s done the job, build your team.
           </motion.p>
 
           <motion.div variants={containerVariants} className="mt-[52px] flex sm:flex-row flex-col md:items-center gap-6">
