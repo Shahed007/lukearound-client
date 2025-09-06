@@ -9,28 +9,25 @@ export default function PricingSection() {
       description: "For large organizations",
       price: "15%",
       priceDescription: "First Annual Salary",
-      role: "Client",
       features: ["Volume discounts", "6-month replacement guarantee", "Dedicated team", "24/7 support"],
       buttonText: "Book Now",
       featured: false,
     },
     {
       name: "Talent as a service",
-      description: "For large organizations",
+      description: "",
       price: "Custom",
       priceDescription: "First Annual Salary",
-      role: "Client",
       features: ["Volume discounts", "6-month replacement guarantee", "Dedicated team", "24/7 support"],
       buttonText: "Book Now",
       featured: true,
     },
     {
-      name: "Exclusive contract",
-      description: "For large organizations",
-      price: "20%",
-      priceDescription: "First Annual Salary",
-      role: "Client",
-      features: ["Volume discounts", "6-month replacement guarantee", "Dedicated team", "24/7 support"],
+      name: "Exclusive Partnership",
+      description: "From Start to upt Scale up​ Change to",
+      price: "15% Sub £100K / 20% over £100K",
+      priceDescription: "Keep First Year Salary",
+      features: ["Volume discount", "Consistent Pipelining", "Strategy Updates​", "GMT Support Lead"],
       buttonText: "Book Now",
       featured: false,
     },
@@ -88,7 +85,7 @@ export default function PricingSection() {
         <motion.h2 className="text-5xl font-bold text-gray-900 mb-4" variants={titleVariants}>
           Transparent Pricing
         </motion.h2>
-        <motion.p className="text-xl text-gray-600 max-w-3xl mx-auto" variants={glowEffect}>
+        <motion.p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Choose the plan that fits your hiring needs. No hidden fees, no surprises.
         </motion.p>
       </motion.div>
@@ -128,16 +125,13 @@ export default function PricingSection() {
               <motion.h3 className="text-2xl font-bold" variants={itemVariants}>
                 {plan.name}
               </motion.h3>
-              <motion.span className={`px-3 py-1 rounded-full text-sm font-medium ${plan.featured ? "bg-white/20 text-white" : "bg-slate-800 text-white"}`} variants={itemVariants}>
-                Role: {plan.role}
-              </motion.span>
               <motion.p className={`text-sm ${plan.featured ? "text-gray-300" : "text-gray-600"}`} variants={itemVariants}>
                 {plan.description}
               </motion.p>
             </div>
 
             <motion.div className="mb-8" variants={itemVariants}>
-              <div className="text-5xl font-bold mb-2">{plan.price}</div>
+              <div className="text-3xl font-bold mb-2">{plan.price}</div>
               <p className={`text-sm ${plan.featured ? "text-gray-300" : "text-gray-600"}`}>{plan.priceDescription}</p>
             </motion.div>
 

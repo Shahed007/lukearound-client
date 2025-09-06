@@ -19,11 +19,11 @@ import Link from "next/link";
 
 export default function TechnologyIntelligence() {
   const services = [
-    "Talent & Competitor market insights – live salary trends, location hotspots, role demand",
-    "Strategic hiring plans – built around your business goals and funding stage",
-    "Outbound - Passive candidate pipeline system",
-    "Inbound - Social & Ad campaigns to create attention to your opportunities",
-    "DE&I data – to shape inclusive hiring and reporting with intention",
+    "Market & talent insights – salary benchmarks, role demand, and location hotspots to guide smarter hiring​",
+    "Strategic hiring plans – tailored to business goals, funding stage, and GTM priorities",
+    "Pipeline growth – outbound and passive candidate systems to keep talent flowing​",
+    "Employer brand activation – inbound campaigns and social strategies that attract the right people",
+    "DE&I & retention metrics – data to drive inclusive hiring and long-term workforce stability",
   ];
 
   const companyLogos = [
@@ -154,14 +154,8 @@ export default function TechnologyIntelligence() {
                 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
                 variants={titleVariants}
               >
-                Technology & Intelligence
+                Change Intelligence to Tools​
               </motion.h1>
-              <motion.p
-                className="text-xl text-slate-300"
-                variants={titleVariants}
-              >
-                Real-time insights. Smarter hiring decisions.
-              </motion.p>
             </motion.div>
 
             <motion.div
@@ -210,7 +204,7 @@ export default function TechnologyIntelligence() {
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
               >
-                Book A Call
+                Request Book A Call
               </motion.button>
             </Link>
           </motion.div>
