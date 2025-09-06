@@ -282,9 +282,9 @@ export function ContactForm() {
                   icon: MapPin,
                   text: "123 Business District, San Francisco, CA 94105",
                 },
-                { icon: Phone, text: "+1 (555) 123-4567" },
-                { icon: Mail, text: "hello@talentforge.com" },
-                { icon: Clock, text: "Mon-Fri: 9AM-6PM PST" },
+                { icon: Phone, text: "+447476981178" },
+                { icon: Mail, text: "Contact@HowYaDoing.io" },
+                { icon: Clock, text: "Mon-Fri: 9AM - 7PM PST" },
               ].map((item, index) => (
                 <motion.div
                   key={index}

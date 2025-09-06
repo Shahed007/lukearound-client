@@ -53,7 +53,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
 
 const ClientSection = () => {
   return (
-    <div className="bg-white mb-6" id="clients">
+    <div className="bg-[#d2e7ec] mb-6" id="clients">
       <AnimatedSection amount={0.15} delay={0.1}>
         <WhatWeAre />
       </AnimatedSection>

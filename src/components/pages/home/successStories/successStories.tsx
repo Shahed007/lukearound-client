@@ -225,7 +225,7 @@ const SuccessStories: React.FC = () => {
             Our Success Stories
           </motion.h2>
           <motion.div variants={titleVariants}>
-            <motion.p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed" variants={glowEffect}>
+            <motion.p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Explore current openings with our partner companies across various industries
             </motion.p>
           </motion.div>
