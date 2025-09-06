@@ -118,23 +118,23 @@ export default function PricingSection() {
     },
   };
 
-  const glowEffect: Variants = {
-    hidden: { boxShadow: "0 0 0px rgba(59, 130, 246, 0)" },
-    visible: {
-      boxShadow: [
-        "0 0 0px rgba(59, 130, 246, 0)",
-        "0 0 25px rgba(59, 130, 246, 0.7)",
-        "0 0 15px rgba(59, 130, 246, 0.4)",
-        "0 0 8px rgba(59, 130, 246, 0.2)",
-      ],
-      transition: {
-        duration: 2,
-        times: [0, 0.5, 0.8, 1],
-        repeat: Infinity,
-        repeatDelay: 3,
-      },
-    },
-  };
+  // const glowEffect: Variants = {
+  //   hidden: { boxShadow: "0 0 0px rgba(59, 130, 246, 0)" },
+  //   visible: {
+  //     boxShadow: [
+  //       "0 0 0px rgba(59, 130, 246, 0)",
+  //       "0 0 25px rgba(59, 130, 246, 0.7)",
+  //       "0 0 15px rgba(59, 130, 246, 0.4)",
+  //       "0 0 8px rgba(59, 130, 246, 0.2)",
+  //     ],
+  //     transition: {
+  //       duration: 2,
+  //       times: [0, 0.5, 0.8, 1],
+  //       repeat: Infinity,
+  //       repeatDelay: 3,
+  //     },
+  //   },
+  // };
 
   return (
     <div
