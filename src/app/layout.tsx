@@ -14,6 +14,12 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
+// ✅ Metadata for tab title
+export const metadata = {
+  title: "lukearound", // <-- This sets the browser tab title
+  description: "Explore live opportunities and testimonials",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
