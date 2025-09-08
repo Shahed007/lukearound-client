@@ -3,11 +3,11 @@ import React from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
-import LinkedIn from "@/assets/technology-logo/LinkedInLogo.png";
-import jungle from "@/assets/technology-logo/jungleLogo.png";
-import chatGPT from "@/assets/technology-logo/ChatGPTLogo.png";
-import vqnnq from "@/assets/technology-logo/VONQLogo.png";
-import lusha from "@/assets/technology-logo/LushaLogo.png";
+import GoolgeWork from "@/assets/technology-logo/google.png";
+import jungle from "@/assets/technology-logo/Lusha_logo.png";
+import chatGPT from "@/assets/technology-logo/Salesfinity_Company_Logo_1_35da3a46a3.png";
+import vqnnq from "@/assets/technology-logo/Perplexity_AI_logo.svg.png";
+import lusha from "@/assets/technology-logo/Google-Gemini-Logo-PNG-Photos-thumb.png";
 import cnava from "@/assets/technology-logo/CanvaLogo.png";
 import linkedInRecru from "@/assets/technology-logo/LinkedInRecruiterLogo.png";
 import clay from "@/assets/technology-logo/ClayLogo.png";
@@ -27,7 +27,7 @@ export default function TechnologyIntelligence() {
   ];
 
   const companyLogos = [
-    { name: "LinkedIn", logo: LinkedIn },
+    { name: "Google Workshope", logo: GoolgeWork },
     { name: "Welcome to the Jungle", logo: jungle },
     { name: "ChatGPT", logo: chatGPT },
     { name: "Vonq", logo: vqnnq },
@@ -223,9 +223,9 @@ export default function TechnologyIntelligence() {
                 <Image
                   src={company.logo}
                   alt={company.name}
-                  width={100}
+                  width={1000}
                   height={60}
-                  className="object-contain max-h-12"
+                  className="object-cover w-full px-2"
                 />
               </motion.div>
             ))}

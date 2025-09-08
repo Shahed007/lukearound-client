@@ -16,13 +16,12 @@ export default function Footer() {
               </Link>
             </div>
 
-            <div className="text-lg text-[#7B7B7B] leading-relaxed">
+            <div className=" text-[#7B7B7B] leading-relaxed">
               <p className="mb-2">
-                Trading division of Create & Adapt Ltd 2021
+                Trading Division of Trivium Partners LTD​
               </p>
-              <p>
-                Create & Adapt Limited is a company registered in England and
-                Wales –Number 9723247
+              <p className="text-justify">
+                Company Registration Number 16564926
               </p>
             </div>
           </div>
@@ -30,30 +29,30 @@ export default function Footer() {
           {/* Right side - Navigation links */}
           <div className="flex-1 max-w-md">
             <nav className="space-y-4">
-              <a
-                href="#"
+              <p
+                
                 className="block text-[#115A90] font-semibold text-md hover:text-blue-700 transition-colors"
               >
                 BOOK A QUICK CALL
-              </a>
+              </p>
               <a
                 href="#"
                 className="block text-[#7B7B7B] text-md hover:text-gray-900 transition-colors"
               >
                 Home
               </a>
-              <a
+              <Link
                 href="#"
                 className="block text-[#7B7B7B] text-md hover:text-gray-900 transition-colors"
               >
                 Talent Partners
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href={"#contact-us"} scroll={true}
                 className="block text-[#7B7B7B] text-md hover:text-gray-900 transition-colors"
               >
                 Book a call
-              </a>
+              </Link>
               <a
                 href="#"
                 className="block text-[#7B7B7B] text-md hover:text-gray-900 transition-colors"
@@ -80,7 +79,7 @@ export default function Footer() {
       {/* Copyright notice */}
       <div className="mt-6 p-4 border-t border-gray-200">
         <p className="text-center text-lg text-gray-600">
-          © Copyright 2025, All Rights Reserved by younesabidine
+          © Copyright 2025, All Rights Reserved by Trivium Partners LTD
         </p>
       </div>
     </footer>

@@ -185,18 +185,18 @@ const SuccessStories: React.FC = () => {
     visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring" as const, stiffness: 120, damping: 10, duration: 0.8 } },
   };
 
-  const glowEffect: Variants = {
-    hidden: { textShadow: "0 0 0px rgba(59, 130, 246, 0)" },
-    visible: {
-      textShadow: [
-        "0 0 0px rgba(59, 130, 246, 0)",
-        "0 0 20px rgba(59, 130, 246, 0.6)",
-        "0 0 10px rgba(59, 130, 246, 0.3)",
-        "0 0 5px rgba(59, 130, 246, 0.1)",
-      ],
-      transition: { duration: 2, times: [0, 0.5, 0.8, 1], repeat: Infinity, repeatDelay: 3 },
-    },
-  };
+  // const glowEffect: Variants = {
+  //   hidden: { textShadow: "0 0 0px rgba(59, 130, 246, 0)" },
+  //   visible: {
+  //     textShadow: [
+  //       "0 0 0px rgba(59, 130, 246, 0)",
+  //       "0 0 20px rgba(59, 130, 246, 0.6)",
+  //       "0 0 10px rgba(59, 130, 246, 0.3)",
+  //       "0 0 5px rgba(59, 130, 246, 0.1)",
+  //     ],
+  //     transition: { duration: 2, times: [0, 0.5, 0.8, 1], repeat: Infinity, repeatDelay: 3 },
+  //   },
+  // };
 
   return (
     <motion.section
@@ -225,7 +225,7 @@ const SuccessStories: React.FC = () => {
             Our Success Stories
           </motion.h2>
           <motion.div variants={titleVariants}>
-            <motion.p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed" variants={glowEffect}>
+            <motion.p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Explore current openings with our partner companies across various industries
             </motion.p>
           </motion.div>

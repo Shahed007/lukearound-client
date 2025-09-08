@@ -292,7 +292,7 @@ export default function LiveOpportunities() {
                   />
                   
                   {/* Featured badge */}
-                  {opportunity.featured && (
+                  {/* {opportunity.featured && (
                     <motion.div 
                       className="absolute -top-3 -right-3"
                       initial={{ scale: 0, rotate: -180 }}
@@ -303,7 +303,7 @@ export default function LiveOpportunities() {
                         Featured
                       </div>
                     </motion.div>
-                  )}
+                  )} */}
                   
                   {/* Header with badges */}
                   <div className="flex items-center justify-between mb-6">

@@ -6,7 +6,7 @@ import Hero from "@/components/pages/home/Hero";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#d2e7ec]">
       <Hero />
       <MarqueeFlow />
       <ClientSection />

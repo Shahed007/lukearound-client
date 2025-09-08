@@ -47,7 +47,7 @@ const scaleIn = {
 
 const CandidateSection = () => {
   return (
-    <div className="bg-white" id="candidates">
+    <div className="bg-[#d2e7ec]" id="candidates">
       {/* First section - fadeInUp */}
       <motion.div
         initial="hidden"
