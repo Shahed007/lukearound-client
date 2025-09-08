@@ -59,18 +59,18 @@ export default function PricingSection() {
     visible: { opacity: 1, x: 0, transition: { type: "spring" as const, stiffness: 150, damping: 12, duration: 0.6 } },
   };
 
-  const glowEffect: Variants = {
-    hidden: { boxShadow: "0 0 0px rgba(59, 130, 246, 0)" },
-    visible: {
-      boxShadow: [
-        "0 0 0px rgba(59, 130, 246, 0)",
-        "0 0 25px rgba(59, 130, 246, 0.7)",
-        "0 0 15px rgba(59, 130, 246, 0.4)",
-        "0 0 8px rgba(59, 130, 246, 0.2)",
-      ],
-      transition: { duration: 2, times: [0, 0.5, 0.8, 1], repeat: Infinity, repeatDelay: 3 },
-    },
-  };
+  // const glowEffect: Variants = {
+  //   hidden: { boxShadow: "0 0 0px rgba(59, 130, 246, 0)" },
+  //   visible: {
+  //     boxShadow: [
+  //       "0 0 0px rgba(59, 130, 246, 0)",
+  //       "0 0 25px rgba(59, 130, 246, 0.7)",
+  //       "0 0 15px rgba(59, 130, 246, 0.4)",
+  //       "0 0 8px rgba(59, 130, 246, 0.2)",
+  //     ],
+  //     transition: { duration: 2, times: [0, 0.5, 0.8, 1], repeat: Infinity, repeatDelay: 3 },
+  //   },
+  // };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 mb-20" id="pricing">
