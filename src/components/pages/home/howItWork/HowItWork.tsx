@@ -87,7 +87,7 @@ export default function HowItWorks() {
           How We Work​
         </motion.h2>
         <motion.div variants={titleVariants}>
-          <motion.p className="text-gray-600 max-w-2xl mx-auto text-xl">
+          <motion.p className="text-gray-800 max-w-2xl mx-auto text-xl">
             Our inside-edge process delivers faster hires, stronger fits, and
             lasting impact.&quot;​
           </motion.p>

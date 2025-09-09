@@ -278,13 +278,13 @@ export function ContactForm() {
             {/* Contact Details */}
             <div className="space-y-4">
               {[
-                {
-                  icon: MapPin,
-                  text: "123 Business District, San Francisco, CA 94105",
-                },
-                { icon: Phone, text: "+447476981178" },
+                // {
+                //   icon: MapPin,
+                //   text: "123 Business District, San Francisco, CA 94105",
+                // },
+                // { icon: Phone, text: "+447476981178" },
                 { icon: Mail, text: "Contact@HowYaDoing.io" },
-                { icon: Clock, text: "Mon-Fri: 9AM - 7PM PST" },
+                { icon: Clock, text: "Mon-Fri: 9AM - 8PM UK Time (London)" },
               ].map((item, index) => (
                 <motion.div
                   key={index}

@@ -111,7 +111,7 @@ export default function TestimonialsCarousel() {
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-        <p className="text-lg text-gray-600 max-w-6xl mx-auto">
+        <p className="text-lg text-gray-800 max-w-6xl mx-auto">
           Don&#39;t just take our word for it. Here&#39;s what our partners have to say about working with us.
         </p>
       </div>

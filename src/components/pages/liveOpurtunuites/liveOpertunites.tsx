@@ -225,14 +225,14 @@ export default function LiveOpportunities() {
         >
           Live Opportunities
         </motion.h2>
-        <motion.div
+        {/* <motion.div
           initial={{ width: 0 }}
           animate={{ width: "100px" }}
           transition={{ delay: 0.5, duration: 0.8 }}
           className="h-1 bg-blue-500 mx-auto mb-4 rounded-full"
-        />
+        /> */}
         <motion.p 
-          className="text-gray-600 text-lg max-w-2xl mx-auto"
+          className="text-gray-800 text-lg max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}

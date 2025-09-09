@@ -87,7 +87,7 @@ export default function EmployerBrandingSection() {
           </motion.h2>
 
           <motion.p
-            className="text-gray-600 text-sm leading-relaxed text-justify"
+            className="text-gray-800 text-sm leading-relaxed text-justify"
             variants={itemVariants}
           >
             From developers and engineers to operations, sales, and project
@@ -99,7 +99,7 @@ export default function EmployerBrandingSection() {
 
           <motion.div className="space-y-4" variants={itemVariants}>
             <h3 className="text-xl font-semibold text-gray-900">
-              What we provide:
+              What We Provide:
             </h3>
 
             <div className="space-y-3">
@@ -127,7 +127,7 @@ export default function EmployerBrandingSection() {
                       />
                     </svg>
                   </div>
-                  <p className="text-gray-700 text-sm">{text}</p>
+                  <p className="text-gray-800 text-sm">{text}</p>
                 </motion.div>
               ))}
             </div>

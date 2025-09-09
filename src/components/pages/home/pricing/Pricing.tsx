@@ -5,44 +5,45 @@ import { motion, Variants } from "framer-motion";
 export default function PricingSection() {
   const plans = [
     {
-      name: "Head Hunters ​",
-      description: "For Mid & Large Organisations",
-      price: "Change to 20% Fixed",
-      priceDescription: "​Keep First Year Salary",
+      name: "Headhunters​",
+      description: "Scale to Corporate",
+      price: "20% Fixed",
+      priceDescription: "First Year Salary",
       features: [
-        "Volume discounts",
-        "6-month replacement guarantee",
-        "Dedicated team",
-        "24/7 support",
+        "Critical Roles",
+        "C-Suite Hiring",
+        "Dedicated Hunt Team",
+        "Complex Roles",
       ],
       buttonText: "Book Now",
       featured: false,
     },
     {
       name: "Exclusive Partnership",
-      description: "From Start to upt Scale up​ Change to",
-      price: "20%",
-      priceDescription: "15% Sub £100K / 20% over £100K Keep First Year Salary",
+      description: "From Startup to Scale-up",
+      price: ["15% for roles under £100K", "20% for roles over £100K"],
+      priceDescription: "First Year Salary",
       features: [
         "Volume discount",
         "Consistent Pipelining",
         "Strategy Updates​",
         "GMT Support Lead",
+        "12 Month Contract",
       ],
       buttonText: "Book Now",
       featured: true,
     },
     {
       name: "Talent as a service",
-      description: "Pre-Seed to Start-up​",
-      price: "Custom",
+      description: "From Pre-Seed to Scale-ups​",
+      price: ["Bespoke Pricing", "Monthly Fee Plus", "Fixed Per Placement"],
       priceDescription:
         "Bespoke Pricing ​Monthly Fee Plus ​Fixed Per Placement Fee ",
       features: [
         "Embedded within your Org",
         "2 to 12 month contract​",
         "Access to Tool Kit",
-        "Dedicated Team Member",
+        "Operate as You",
       ],
       buttonText: "Book Now",
       featured: false,
@@ -118,24 +119,6 @@ export default function PricingSection() {
     },
   };
 
-  // const glowEffect: Variants = {
-  //   hidden: { boxShadow: "0 0 0px rgba(59, 130, 246, 0)" },
-  //   visible: {
-  //     boxShadow: [
-  //       "0 0 0px rgba(59, 130, 246, 0)",
-  //       "0 0 25px rgba(59, 130, 246, 0.7)",
-  //       "0 0 15px rgba(59, 130, 246, 0.4)",
-  //       "0 0 8px rgba(59, 130, 246, 0.2)",
-  //     ],
-  //     transition: {
-  //       duration: 2,
-  //       times: [0, 0.5, 0.8, 1],
-  //       repeat: Infinity,
-  //       repeatDelay: 3,
-  //     },
-  //   },
-  // };
-
   return (
     <div
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 mb-20"
@@ -155,7 +138,7 @@ export default function PricingSection() {
         >
           Transparent Pricing
         </motion.h2>
-        <motion.p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <motion.p className="text-xl text-gray-700 max-w-3xl mx-auto">
           Choose the plan that fits your hiring needs. No hidden fees, no
           surprises.
         </motion.p>
@@ -211,8 +194,23 @@ export default function PricingSection() {
               </motion.p>
             </div>
 
+            {/* FIXED PRICE DESIGN */}
             <motion.div className="mb-8" variants={itemVariants}>
-              <div className="text-3xl font-bold mb-2">{plan.price}</div>
+              {Array.isArray(plan.price) ? (
+                <div className="space-y-1">
+                  {plan.price.map((line, i) => (
+                    <div
+                      key={i}
+                      className="text-lg font-semibold leading-snug"
+                    >
+                      {line}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-3xl font-bold mb-2">{plan.price}</div>
+              )}
+
               <p
                 className={`text-sm ${
                   plan.featured ? "text-gray-300" : "text-gray-600"

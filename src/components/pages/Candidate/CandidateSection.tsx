@@ -2,10 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { easeOut } from "framer-motion"; // ✅ import easing
-
-import EmployerBrandingSection from "../home/employee/EmployeBrandingSection";
 import LiveOpportunities from "../liveOpurtunuites/liveOpertunites";
 import SuccessStories from "../home/successStories/successStories";
+import CopyEmployerBrandingSection from "../home/employee/employe2";
 
 // Different animation variants for variety
 const fadeInUp = {
@@ -55,7 +54,7 @@ const CandidateSection = () => {
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUp}
       >
-        <EmployerBrandingSection />
+        <CopyEmployerBrandingSection />
       </motion.div>
 
       {/* Second section - different animation for variety */}

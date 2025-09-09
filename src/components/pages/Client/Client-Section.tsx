@@ -7,17 +7,18 @@ import TechnologyIntelligence from "../home/technologyIntelignce/TechnologyIntel
 import HowItWorks from "../home/howItWork/HowItWork";
 import PricingSection from "../home/pricing/Pricing";
 import TestimonialsCarousel from "../home/testimonial/Testimonial";
+import EmployerBrandingSection from "../home/employee/EmployeBrandingSection";
 
 // Corrected fadeInUp variant using easing function
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { 
-      duration: 0.6, 
-      ease: easeOut // ✅ use easing function
-    } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: easeOut, // ✅ use easing function
+    },
   },
 };
 
@@ -30,12 +31,12 @@ type AnimatedSectionProps = {
   className?: string;
 };
 
-const AnimatedSection: React.FC<AnimatedSectionProps> = ({ 
-  children, 
-  variants = fadeInUp, 
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({
+  children,
+  variants = fadeInUp,
   amount = 0.2,
   delay = 0,
-  className = "" 
+  className = "",
 }) => {
   return (
     <motion.div
@@ -69,6 +70,14 @@ const ClientSection = () => {
       <AnimatedSection amount={0.2}>
         <PricingSection />
       </AnimatedSection>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInUp}
+      >
+        <EmployerBrandingSection />
+      </motion.div>
 
       <AnimatedSection amount={0.3} delay={0.1}>
         <TestimonialsCarousel />
