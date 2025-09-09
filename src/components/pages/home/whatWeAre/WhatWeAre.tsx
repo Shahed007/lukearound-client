@@ -19,18 +19,17 @@ const WhatWeAre = () => {
           {/* What we are section */}
           <div className="mb-12">
             <h2 className="font-bold mb-[18px] text-[32px] md:text-[40px] text-dark-text text-center md:text-left">
-              What We Do?
+              What We Do ?
             </h2>
             <div className="w-full mb-4">
               <Image className="w-full" src={image1} alt="image 1" />
             </div>
             <EllipsisText
-              charLimit={140}
               text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
             />
             <div className="flex justify-center">
               <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                Book a Free Talent Review
+                Book A Free Talent Review
               </button>
             </div>
           </div>
@@ -58,7 +57,7 @@ const WhatWeAre = () => {
             </div>
           </div>
 
-          {/* Our Capabilities section */}
+          {/* Pain Points We Solve section */}
           <div>
             <h2 className="font-bold mb-[18px] text-[32px] md:text-[40px] text-dark-text text-center md:text-right">
               Pain Points We Solve​
@@ -67,13 +66,12 @@ const WhatWeAre = () => {
               <Image className="w-full" src={image2} alt="image 2" />
             </div>
             <EllipsisText
-              charLimit={140}
               text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
             />
             <div className="flex justify-center">
               <Link href={"#contact-us"} scroll={true}>
                 <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                  Request Book A Call
+                  Book A Call
                 </button>
               </Link>
             </div>
@@ -99,17 +97,16 @@ const WhatWeAre = () => {
             </div>
             <div>
               <h2 className="font-bold mb-[18px] text-[40px] text-dark-text text-left">
-                What we are?
+                What We Do ?
               </h2>
               <div className="w-full">
                 <Image className="w-full" src={image1} alt="image 1" />
               </div>
               <EllipsisText
-                charLimit={140}
                 text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
               />
               <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                Book a Free Talent Review
+                Book A Free Talent Review
               </button>
             </div>
           </div>
@@ -138,19 +135,18 @@ const WhatWeAre = () => {
             </div>
             <div>
               <h2 className="font-bold mb-[18px] text-[40px] text-dark-text text-right">
-                Our Capabilities
+                Pain Points We Solve
               </h2>
               <div className="w-full">
                 <Image className="w-full" src={image2} alt="image 2" />
               </div>
               <EllipsisText
-                charLimit={140}
                 text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
               />
               <div className="flex justify-end">
                 <Link href={"#contact-us"} scroll={true}>
                   <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                    Request Book A Call
+                    Book A Call
                   </button>
                 </Link>
               </div>

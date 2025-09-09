@@ -154,7 +154,7 @@ export default function TechnologyIntelligence() {
                 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
                 variants={titleVariants}
               >
-                Change Intelligence to Tools​
+                Intelligent Tool Kit
               </motion.h1>
             </motion.div>
 
@@ -167,7 +167,7 @@ export default function TechnologyIntelligence() {
                 className="text-2xl font-semibold mb-8 text-slate-800"
                 variants={serviceItemVariants}
               >
-                What we provide:
+                What We provide:
               </motion.h2>
               <ul className="space-y-5">
                 {services.map((service, index) => (
@@ -204,7 +204,7 @@ export default function TechnologyIntelligence() {
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
               >
-                Request Book A Call
+                Book A Call
               </motion.button>
             </Link>
           </motion.div>
