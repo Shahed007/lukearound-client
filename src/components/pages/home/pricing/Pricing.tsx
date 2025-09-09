@@ -36,9 +36,9 @@ export default function PricingSection() {
     {
       name: "Talent as a service",
       description: "From Pre-Seed to Scale-ups​",
-      price: ["Bespoke Pricing", "Monthly Fee Plus", "Fixed Per Placement"],
+      price: ["Bespoke Pricing", "Monthly Fee Plus"],
       priceDescription:
-        "Bespoke Pricing ​Monthly Fee Plus ​Fixed Per Placement Fee ",
+        "​Fixed Per Placement Fee ",
       features: [
         "Embedded within your Org",
         "2 to 12 month contract​",
