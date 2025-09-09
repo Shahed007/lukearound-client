@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { useState, useEffect } from "react";
-import { MapPin, Phone, Mail, Clock, ChevronDown, Send } from "lucide-react";
+import {Mail, Clock, ChevronDown, Send } from "lucide-react";
 import Image from "next/image";
 import image from "@/assets/contact-image.png";
 import { motion, useAnimation, AnimatePresence, Variants } from "framer-motion";
