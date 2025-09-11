@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 // ✅ Metadata for tab title
 export const metadata = {
-  title: "lukearound", // <-- This sets the browser tab title
+  title: "HowYaDoing", // <-- This sets the browser tab title
   description: "Explore live opportunities and testimonials",
 };
 

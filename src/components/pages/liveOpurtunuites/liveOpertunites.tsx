@@ -274,7 +274,7 @@ export default function LiveOpportunities() {
               <motion.div 
                 variants={cardVariants}
                 whileHover="hover"
-                className="h-full"
+                className="h-full cursor-pointer"
               >
                 <div
                   className={`rounded-2xl p-6 transition-all duration-300 flex flex-col h-full relative overflow-hidden group ${
@@ -394,7 +394,7 @@ export default function LiveOpportunities() {
                         boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.04)" 
                       }}
                       whileTap={{ scale: 0.98 }}
-                      className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-200 ${opportunity.buttonStyle}`}
+                      className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-200 cursor-pointer ${opportunity.buttonStyle}`}
                     >
                       {opportunity.buttonText}
                     </motion.button>

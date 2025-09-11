@@ -253,7 +253,7 @@ export default function PricingSection() {
             </div>
 
             <motion.button
-              className={`w-full py-4 px-6 rounded-lg font-medium transition-colors mt-auto ${
+              className={`w-full py-4 px-6 rounded-lg font-medium transition-colors mt-auto cursor-pointer ${
                 plan.featured
                   ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg"
                   : "bg-red-500 text-white hover:bg-red-600"

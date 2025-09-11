@@ -179,7 +179,7 @@ const Hero = () => {
                   variants={buttonVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  className="btn btn-primary"
+                  className="btn btn-primary cursor-pointer"
                 >
                   Clients
                 </motion.button>
@@ -199,7 +199,7 @@ const Hero = () => {
                   variants={buttonVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  className="btn btn-secondary"
+                  className="btn btn-secondary cursor-pointer"
                 >
                   Candidates
                 </motion.button>

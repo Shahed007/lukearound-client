@@ -180,7 +180,7 @@ export function ContactForm() {
         <motion.button
           type="button"
           onClick={() => setOpenSelect(isOpen ? null : name)}
-          className="w-full mt-1 px-3 py-2 bg-[#082B47] border border-[#D2D1D1] text-[#D2D1D1] placeholder:text-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D2D1D1] flex items-center justify-between"
+          className="w-full mt-1 px-3 py-2 bg-[#082B47] border border-[#D2D1D1] text-[#D2D1D1] placeholder:text-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D2D1D1] flex items-center justify-between cursor-pointer"
           whileHover={{
             scale: 1.02,
             borderColor: "#ffffff",

@@ -144,7 +144,7 @@ export default function TestimonialsCarousel() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
-                className="relative h-full"
+                className="relative h-full cursor-pointer"
               >
                 {/* Main testimonial card */}
                 <div className="bg-slate-800 rounded-2xl p-8 pb-12 text-white relative h-full min-h-[380px] shadow-lg">

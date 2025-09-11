@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import image from "@/assets/Rectangle 21.png";
+import Link from "next/link";
 
 export default function EmployerBrandingSection() {
   const containerVariants: Variants = {
@@ -91,8 +92,8 @@ export default function EmployerBrandingSection() {
             variants={itemVariants}
           >
             From developers and engineers to operations, sales, and project
-            managers — we connect you with a bespoke network of trusted
-            contractors. Whether you need short- term expertise, long-term
+            managers we connect you with a bespoke network of trusted
+            contractors. Whether you need short-term expertise, long-term
             project support, or specialist skills to bridge the gap, we deliver
             professionals who fit your needs and hit the ground running.
           </motion.p>
@@ -127,7 +128,7 @@ export default function EmployerBrandingSection() {
                       />
                     </svg>
                   </div>
-                  <p className="text-gray-800 text-sm">{text}</p>
+                  <p className="text-gray-800 text-sm text-justify">{text}</p>
                 </motion.div>
               ))}
             </div>
@@ -138,13 +139,15 @@ export default function EmployerBrandingSection() {
             variants={itemVariants}
             transition={{ delay: 0.5 }}
           >
-            <motion.button
-              className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 cursor-pointer"
-              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Book a Project Call
-            </motion.button>
+            <Link href={"#contact-us"}>
+              <motion.button
+                className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 cursor-pointer"
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Book a Project Call
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>

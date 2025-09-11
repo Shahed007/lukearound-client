@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import image from "@/assets/Rectangle 22.png";
+import Link from "next/link";
 
 export default function CopyEmployerBrandingSection() {
   const containerVariants: Variants = {
@@ -136,6 +137,7 @@ export default function CopyEmployerBrandingSection() {
             variants={itemVariants}
             transition={{ delay: 0.5 }}
           >
+            <Link href={"#contact-us"}>
             <motion.button
               className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 cursor-pointer"
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
@@ -143,6 +145,7 @@ export default function CopyEmployerBrandingSection() {
             >
               Book a Talent Call
             </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>

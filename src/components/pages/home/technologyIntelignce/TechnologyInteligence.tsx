@@ -199,7 +199,7 @@ export default function TechnologyIntelligence() {
 
             <Link href={"#contact-us"} scroll={true}>
               <motion.button
-                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-red-500/50 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-red-500/50 shadow-lg hover:shadow-xl cursor-pointer"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
