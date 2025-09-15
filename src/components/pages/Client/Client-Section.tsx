@@ -79,9 +79,9 @@ const ClientSection = () => {
         <EmployerBrandingSection />
       </motion.div>
 
-      <AnimatedSection amount={0.3} delay={0.1}>
+      {/* <AnimatedSection amount={0.3} delay={0.1}>
         <TestimonialsCarousel />
-      </AnimatedSection>
+      </AnimatedSection> */}
     </div>
   );
 };

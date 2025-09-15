@@ -58,7 +58,7 @@ const CandidateSection = () => {
       </motion.div>
 
       {/* Second section - different animation for variety */}
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -66,17 +66,17 @@ const CandidateSection = () => {
         transition={{ delay: 0.2 }}
       >
         <LiveOpportunities />
-      </motion.div>
+      </motion.div> */}
 
       {/* Third section - another variation */}
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={scaleIn}
       >
         <SuccessStories />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
