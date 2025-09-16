@@ -108,9 +108,15 @@ const WhatWeAre = () => {
                 </Link>
               </div>
               <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
-              <button className="mt-6 px-6 py-3 bg-[#E43D30] cursor-pointer text-white rounded-xl font-medium hover:opacity-90 transition">
-                Book A Free Talent Review
-              </button>
+              <Link
+                href={
+                  "https://calendly.com/lbarry-howyadoing/30min"
+                }
+              >
+                <button className="mt-6 px-6 py-3 bg-[#E43D30] cursor-pointer text-white rounded-xl font-medium hover:opacity-90 transition">
+                  Book A Free Talent Review
+                </button>
+              </Link>
             </div>
           </div>
           <div></div>

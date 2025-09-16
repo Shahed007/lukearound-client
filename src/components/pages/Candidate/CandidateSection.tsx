@@ -1,9 +1,5 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { easeOut } from "framer-motion"; // ✅ import easing
-import LiveOpportunities from "../liveOpurtunuites/liveOpertunites";
-import SuccessStories from "../home/successStories/successStories";
+import { easeOut, motion } from "framer-motion";
 import CopyEmployerBrandingSection from "../home/employee/employe2";
 
 // Different animation variants for variety

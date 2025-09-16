@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import image from "@/assets/Rectangle 22.png";
+import image from "@/assets/emp-branding.png";
 import Link from "next/link";
 
 export default function CopyEmployerBrandingSection() {
@@ -72,7 +72,7 @@ export default function CopyEmployerBrandingSection() {
               alt="Professional woman holding coffee cup"
               width={500}
               height={400}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto max-h-[700px] object-cover object-top-left"
               priority
             />
           </div>
@@ -137,14 +137,14 @@ export default function CopyEmployerBrandingSection() {
             variants={itemVariants}
             transition={{ delay: 0.5 }}
           >
-            <Link href={"#contact-us"}>
-            <motion.button
-              className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 cursor-pointer"
-              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Book a Talent Call
-            </motion.button>
+            <Link href={"https://calendly.com/lbarry-howyadoing/30min"}>
+              <motion.button
+                className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 cursor-pointer"
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Book a Talent Call
+              </motion.button>
             </Link>
           </motion.div>
         </motion.div>
