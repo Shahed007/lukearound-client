@@ -37,8 +37,7 @@ export default function PricingSection() {
       name: "Talent as a service",
       description: "From Pre-Seed to Scale-ups​",
       price: ["Bespoke Pricing", "Monthly Fee Plus"],
-      priceDescription:
-        "​Fixed Per Placement Fee ",
+      priceDescription: "​Fixed Per Placement Fee ",
       features: [
         "Embedded within your Org",
         "2 to 12 month contract​",
@@ -199,10 +198,7 @@ export default function PricingSection() {
               {Array.isArray(plan.price) ? (
                 <div className="space-y-1">
                   {plan.price.map((line, i) => (
-                    <div
-                      key={i}
-                      className="text-lg font-semibold leading-snug"
-                    >
+                    <div key={i} className="text-lg font-semibold leading-snug">
                       {line}
                     </div>
                   ))}
@@ -252,18 +248,20 @@ export default function PricingSection() {
               ))}
             </div>
 
-            <motion.button
-              className={`w-full py-4 px-6 rounded-lg font-medium transition-colors mt-auto cursor-pointer ${
-                plan.featured
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg"
-                  : "bg-red-500 text-white hover:bg-red-600"
-              }`}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {plan.buttonText}
-            </motion.button>
+            <a href="#contact-us">
+              <motion.button
+                className={`w-full py-4 px-6 rounded-lg font-medium transition-colors mt-auto cursor-pointer ${
+                  plan.featured
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg"
+                    : "bg-red-500 text-white hover:bg-red-600"
+                }`}
+                variants={itemVariants}
+                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {plan.buttonText}
+              </motion.button>
+            </a>
           </motion.div>
         ))}
       </motion.div>

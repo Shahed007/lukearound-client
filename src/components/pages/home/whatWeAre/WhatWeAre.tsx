@@ -9,10 +9,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const WhatWeAre = () => {
   return (
-    <section
-      className="py-[60px] md:py-[100px] bg-[#d2e7ec]"
-      id="what-we-are"
-    >
+    <section className="py-[60px] md:py-[100px] bg-[#d2e7ec]" id="what-we-are">
       <div className="custom-container">
         {/* Mobile Layout */}
         <div className="block md:hidden">
@@ -22,11 +19,15 @@ const WhatWeAre = () => {
               What We Do ?
             </h2>
             <div className="w-full mb-4">
-              <Image className="w-full" src={image1} alt="image 1" />
+              <Link
+                href={
+                  "https://www.linkedin.com/in/garryburns6/?originalSubdomain=uk"
+                }
+              >
+                <Image className="w-full" src={image1} alt="image 1" />
+              </Link>
             </div>
-            <EllipsisText
-              text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-            />
+            <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
             <div className="flex justify-center">
               <button className="mt-6 px-6 py-3 bg-[#E43D30] cursor-pointer text-white rounded-xl font-medium hover:opacity-90 transition">
                 Book A Free Talent Review
@@ -65,9 +66,7 @@ const WhatWeAre = () => {
             <div className="w-full mb-4">
               <Image className="w-full" src={image2} alt="image 2" />
             </div>
-            <EllipsisText
-              text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-            />
+            <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
             <div className="flex justify-center">
               <Link href={"#contact-us"} scroll={true}>
                 <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition cursor-pointer">
@@ -100,11 +99,15 @@ const WhatWeAre = () => {
                 What We Do ?
               </h2>
               <div className="w-full">
-                <Image className="w-full" src={image1} alt="image 1" />
+                <Link
+                  href={
+                    "https://www.linkedin.com/in/garryburns6/?originalSubdomain=uk"
+                  }
+                >
+                  <Image className="w-full" src={image1} alt="image 1" />
+                </Link>
               </div>
-              <EllipsisText
-                text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-              />
+              <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
               <button className="mt-6 px-6 py-3 bg-[#E43D30] cursor-pointer text-white rounded-xl font-medium hover:opacity-90 transition">
                 Book A Free Talent Review
               </button>
@@ -140,9 +143,7 @@ const WhatWeAre = () => {
               <div className="w-full">
                 <Image className="w-full" src={image2} alt="image 2" />
               </div>
-              <EllipsisText
-                text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-              />
+              <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
               <div className="flex justify-end">
                 <Link href={"#contact-us"} scroll={true}>
                   <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition cursor-pointer">
