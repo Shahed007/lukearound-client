@@ -22,7 +22,11 @@ const containerVariants: Variants = {
 
 const itemVariants: Variants = {
   hidden: { y: 50, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 100, damping: 15 } },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
+  },
 };
 
 const hiVariants: Variants = {
@@ -34,31 +38,67 @@ const dotVariants: Variants = {
   hidden: { scale: 0 },
   visible: (i: number) => ({
     scale: 1,
-    transition: { delay: i * 0.2, type: "spring" as const, stiffness: 200, damping: 12 },
+    transition: {
+      delay: i * 0.2,
+      type: "spring" as const,
+      stiffness: 200,
+      damping: 12,
+    },
   }),
-  hover: { scale: 1.5, transition: { type: "spring" as const, stiffness: 400, damping: 10 } },
+  hover: {
+    scale: 1.5,
+    transition: { type: "spring" as const, stiffness: 400, damping: 10 },
+  },
 };
 
 const headingVariants: Variants = {
   hidden: { x: -100, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 100, damping: 15 } },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
+  },
 };
 
 const underlineVariants: Variants = {
   hidden: { width: 0 },
-  visible: { width: "42%", transition: { delay: 1, duration: 0.8, ease: "easeOut" } },
+  visible: {
+    width: "42%",
+    transition: { delay: 1, duration: 0.8, ease: "easeOut" },
+  },
 };
 
 const imageVariants: Variants = {
   hidden: { scale: 0.8, opacity: 0, rotate: 5 },
-  visible: { scale: 1, opacity: 1, rotate: 0, transition: { type: "spring" as const, stiffness: 100, damping: 15, duration: 0.8 } },
-  hover: { scale: 1.02, transition: { type: "spring" as const, stiffness: 400, damping: 10 } },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    rotate: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+      damping: 15,
+      duration: 0.8,
+    },
+  },
+  hover: {
+    scale: 1.02,
+    transition: { type: "spring" as const, stiffness: 400, damping: 10 },
+  },
 };
 
 const buttonVariants: Variants = {
   hidden: { scale: 0.9, opacity: 0 },
-  visible: { scale: 1, opacity: 1, transition: { type: "spring" as const, stiffness: 100, damping: 15 } },
-  hover: { scale: 1.05, y: -5, transition: { type: "spring" as const, stiffness: 400, damping: 10 } },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
+  },
+  hover: {
+    scale: 1.05,
+    y: -5,
+    transition: { type: "spring" as const, stiffness: 400, damping: 10 },
+  },
   tap: { scale: 0.95 },
 };
 
@@ -72,7 +112,7 @@ const Hero = () => {
   }, [controls, inView]);
 
   return (
-    <section className="xl:min-h-[76vh] py-20 xl:py-0 flex items-center overflow-hidden">
+    <section className="xl:min-h-screen py-10 xl:py-0 flex mx-auto items-center overflow-hidden bg-[#d2e7ec]">
       <div className="custom-container gap-10 flex lg:flex-row flex-col">
         <motion.div
           ref={ref}
@@ -82,8 +122,11 @@ const Hero = () => {
           className="flex-1"
         >
           <div className="flex xl:mb-0 mb-5 gap-3">
-            <motion.h2 variants={hiVariants} className="xl:text-[81px] text-[50px] font-poppins font-bold text-primary tracking-wide">
-              HI
+            <motion.h2
+              variants={hiVariants}
+              className="xl:text-[81px] text-[50px] font-poppins font-bold text-primary tracking-wide"
+            >
+              Hi
             </motion.h2>
             <ul className="flex items-center gap-3 mt-11">
               {[0, 1, 2].map((i) => (
@@ -92,42 +135,72 @@ const Hero = () => {
                   custom={i}
                   variants={dotVariants}
                   whileHover="hover"
-                  className={`size-2 rounded-full ${i === 2 ? "bg-accent" : "bg-primary"}`}
+                  className={`size-2 rounded-full ${
+                    i === 2 ? "bg-accent" : "bg-primary"
+                  }`}
                 />
               ))}
             </ul>
           </div>
 
-          <motion.h1 variants={headingVariants} className="text-[60px] sm:leading-30 leading-20 sm:text-[100px] xl:text-[123px] border-l-10 border-background text-background pl-[6px] font-bold font-poppins">
+          <motion.h1
+            variants={headingVariants}
+            className="text-[60px] sm:leading-30 leading-20 sm:text-[100px] xl:text-[123px] border-l-10 border-background text-background pl-[6px] font-bold font-poppins"
+          >
             How Ya{" "}
             <span className="block">
               <motion.span className="relative">
                 Doing?
-                <motion.span variants={underlineVariants} className="block h-[10px] bg-background absolute bottom-2 left-0" style={{ originX: 0 }} />
+                <motion.span
+                  variants={underlineVariants}
+                  className="block h-[10px] bg-background absolute bottom-2 left-0"
+                  style={{ originX: 0 }}
+                />
               </motion.span>
             </span>
           </motion.h1>
 
-          <motion.p variants={itemVariants} className="sm:text-xl font-inter text-dark-text mt-6 mb-[52px]">
-            We bridge the gap between ambitious professionals and forward-thinking organizations, creating partnerships that drive innovation and success.
+          <motion.p
+            variants={itemVariants}
+            className="sm:text-xl font-inter text-dark-text mt-6 mb-[52px]"
+          >
+            You wouldn’t let a tourist lead your expedition. <br /> So why let a
+            recruiter hire your specialist? <br /> Let someone who’s done the
+            job, build your team.
           </motion.p>
 
-          <motion.div variants={containerVariants} className="mt-[52px] flex sm:flex-row flex-col md:items-center gap-6">
+          <motion.div
+            variants={containerVariants}
+            className="mt-[52px] flex sm:flex-row flex-col md:items-center gap-6"
+          >
             <motion.div variants={itemVariants}>
               <Link href="#clients" scroll>
-                <motion.button variants={buttonVariants} whileHover="hover" whileTap="tap" className="btn btn-primary">
+                <motion.button
+                  variants={buttonVariants}
+                  whileHover="hover"
+                  whileTap="tap"
+                  className="btn btn-primary cursor-pointer"
+                >
                   Clients
                 </motion.button>
               </Link>
             </motion.div>
 
-            <motion.span variants={itemVariants} className="text-xl text-center">
+            <motion.span
+              variants={itemVariants}
+              className="text-xl text-center"
+            >
               or
             </motion.span>
 
             <motion.div variants={itemVariants}>
               <Link href="#candidates" scroll>
-                <motion.button variants={buttonVariants} whileHover="hover" whileTap="tap" className="btn btn-secondary">
+                <motion.button
+                  variants={buttonVariants}
+                  whileHover="hover"
+                  whileTap="tap"
+                  className="btn btn-secondary cursor-pointer"
+                >
                   Candidates
                 </motion.button>
               </Link>
@@ -135,7 +208,13 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div variants={imageVariants} initial="hidden" animate={controls} whileHover="hover" className="flex-1 lg:self-start w-full h-full self-end">
+        <motion.div
+          variants={imageVariants}
+          initial="hidden"
+          animate={controls}
+          whileHover="hover"
+          className="flex-1 lg:self-start w-full h-full self-end"
+        >
           <Image src={heroImage} alt="Hero Image" className="size-full" />
         </motion.div>
       </div>

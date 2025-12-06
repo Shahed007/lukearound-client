@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import image from "@/assets/emp-branding2.png";
+import image from "@/assets/emp-branding.png";
 import Link from "next/link";
 
-export default function EmployerBrandingSection() {
+export default function CopyEmployerBrandingSection() {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,7 +72,7 @@ export default function EmployerBrandingSection() {
               alt="Professional woman holding coffee cup"
               width={500}
               height={400}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto max-h-[700px] object-cover object-top-left"
               priority
             />
           </div>
@@ -84,30 +84,28 @@ export default function EmployerBrandingSection() {
             className="text-4xl font-bold text-gray-900 leading-tight"
             variants={itemVariants}
           >
-            Take advantage of our contacter network
+            Employer Branding
           </motion.h2>
 
           <motion.p
             className="text-gray-800 text-sm leading-relaxed text-justify"
             variants={itemVariants}
           >
-            From developers and engineers to operations, sales, and project
-            managers we connect you with a bespoke network of trusted
-            contractors. Whether you need short-term expertise, long-term
-            project support, or specialist skills to bridge the gap, we deliver
-            professionals who fit your needs and hit the ground running.
+            We don’t just hire, we build companies. We deliver all-in-one talent
+            acquisition solutions to help early stage companies achieve hiring
+            success in a sustainable way.
           </motion.p>
 
           <motion.div className="space-y-4" variants={itemVariants}>
             <h3 className="text-xl font-semibold text-gray-900">
-              What We Provide:
+              What we provide:
             </h3>
 
             <div className="space-y-3">
               {[
-                "Access to a curated pool of contractors across technical, commercial, and operational functions.​",
-                "Flexible engagement models,  from single hires to full project teams.",
-                "​Proven ability to scale with your business, delivering expertise exactly when and where it’s needed.",
+                `Proof, answers, and urgency that turn consideration into a "yes".​`,
+                "Assets that sell your workplace to potential hires.",
+                "Internal marketing that turns candidates into applicants.",
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -128,7 +126,7 @@ export default function EmployerBrandingSection() {
                       />
                     </svg>
                   </div>
-                  <p className="text-gray-800 text-sm text-justify">{text}</p>
+                  <p className="text-gray-800 text-sm">{text}</p>
                 </motion.div>
               ))}
             </div>
@@ -145,7 +143,7 @@ export default function EmployerBrandingSection() {
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                 whileTap={{ scale: 0.98 }}
               >
-                Book a Project Call
+                Book a Talent Call
               </motion.button>
             </Link>
           </motion.div>

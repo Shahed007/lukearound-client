@@ -3,11 +3,11 @@ import React from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
-import LinkedIn from "@/assets/technology-logo/LinkedInLogo.png";
-import jungle from "@/assets/technology-logo/jungleLogo.png";
-import chatGPT from "@/assets/technology-logo/ChatGPTLogo.png";
-import vqnnq from "@/assets/technology-logo/VONQLogo.png";
-import lusha from "@/assets/technology-logo/LushaLogo.png";
+import GoolgeWork from "@/assets/technology-logo/google.png";
+import jungle from "@/assets/technology-logo/Lusha_logo.png";
+import chatGPT from "@/assets/technology-logo/Salesfinity_Company_Logo_1_35da3a46a3.png";
+import vqnnq from "@/assets/technology-logo/Perplexity_AI_logo.svg.png";
+import lusha from "@/assets/technology-logo/Google-Gemini-Logo-PNG-Photos-thumb.png";
 import cnava from "@/assets/technology-logo/CanvaLogo.png";
 import linkedInRecru from "@/assets/technology-logo/LinkedInRecruiterLogo.png";
 import clay from "@/assets/technology-logo/ClayLogo.png";
@@ -19,15 +19,15 @@ import Link from "next/link";
 
 export default function TechnologyIntelligence() {
   const services = [
-    "Talent & Competitor market insights – live salary trends, location hotspots, role demand",
-    "Strategic hiring plans – built around your business goals and funding stage",
-    "Outbound - Passive candidate pipeline system",
-    "Inbound - Social & Ad campaigns to create attention to your opportunities",
-    "DE&I data – to shape inclusive hiring and reporting with intention",
+    "Market & talent insights – salary benchmarks, role demand, and location hotspots to guide smarter hiring​",
+    "Strategic hiring plans – tailored to business goals, funding stage, and GTM priorities",
+    "Pipeline growth – outbound and passive candidate systems to keep talent flowing​",
+    "Employer brand activation – inbound campaigns and social strategies that attract the right people",
+    "DE&I & retention metrics – data to drive inclusive hiring and long-term workforce stability",
   ];
 
   const companyLogos = [
-    { name: "LinkedIn", logo: LinkedIn },
+    { name: "Google Workshope", logo: GoolgeWork },
     { name: "Welcome to the Jungle", logo: jungle },
     { name: "ChatGPT", logo: chatGPT },
     { name: "Vonq", logo: vqnnq },
@@ -154,14 +154,8 @@ export default function TechnologyIntelligence() {
                 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
                 variants={titleVariants}
               >
-                Technology & Intelligence
+                Intelligent Tool Kit
               </motion.h1>
-              <motion.p
-                className="text-xl text-slate-300"
-                variants={titleVariants}
-              >
-                Real-time insights. Smarter hiring decisions.
-              </motion.p>
             </motion.div>
 
             <motion.div
@@ -173,7 +167,7 @@ export default function TechnologyIntelligence() {
                 className="text-2xl font-semibold mb-8 text-slate-800"
                 variants={serviceItemVariants}
               >
-                What we provide:
+                What We provide:
               </motion.h2>
               <ul className="space-y-5">
                 {services.map((service, index) => (
@@ -205,7 +199,7 @@ export default function TechnologyIntelligence() {
 
             <Link href={"#contact-us"} scroll={true}>
               <motion.button
-                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-red-500/50 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-red-500/50 shadow-lg hover:shadow-xl cursor-pointer"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
@@ -229,9 +223,9 @@ export default function TechnologyIntelligence() {
                 <Image
                   src={company.logo}
                   alt={company.name}
-                  width={100}
+                  width={1000}
                   height={60}
-                  className="object-contain max-h-12"
+                  className="object-cover w-full px-2"
                 />
               </motion.div>
             ))}
