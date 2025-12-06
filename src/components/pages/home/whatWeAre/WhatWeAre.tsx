@@ -9,28 +9,28 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const WhatWeAre = () => {
   return (
-    <section
-      className="py-[60px] md:py-[100px] bg-main-background"
-      id="what-we-are"
-    >
+    <section className="py-[60px] md:py-[100px] bg-[#d2e7ec]" id="what-we-are">
       <div className="custom-container">
         {/* Mobile Layout */}
         <div className="block md:hidden">
           {/* What we are section */}
           <div className="mb-12">
             <h2 className="font-bold mb-[18px] text-[32px] md:text-[40px] text-dark-text text-center md:text-left">
-              What we are?
+              What We Do ?
             </h2>
             <div className="w-full mb-4">
-              <Image className="w-full" src={image1} alt="image 1" />
+              <Link
+                href={
+                  "https://www.linkedin.com/in/garryburns6/?originalSubdomain=uk"
+                }
+              >
+                <Image className="w-full" src={image1} alt="image 1" />
+              </Link>
             </div>
-            <EllipsisText
-              charLimit={140}
-              text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-            />
+            <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
             <div className="flex justify-center">
-              <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                Request A Free Talent
+              <button className="mt-6 px-6 py-3 bg-[#E43D30] cursor-pointer text-white rounded-xl font-medium hover:opacity-90 transition">
+                Book A Free Talent Review
               </button>
             </div>
           </div>
@@ -58,21 +58,18 @@ const WhatWeAre = () => {
             </div>
           </div>
 
-          {/* Our Capabilities section */}
+          {/* Pain Points We Solve section */}
           <div>
             <h2 className="font-bold mb-[18px] text-[32px] md:text-[40px] text-dark-text text-center md:text-right">
-              Our Capabilities
+              Pain Points We Solve​
             </h2>
             <div className="w-full mb-4">
               <Image className="w-full" src={image2} alt="image 2" />
             </div>
-            <EllipsisText
-              charLimit={140}
-              text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-            />
+            <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
             <div className="flex justify-center">
               <Link href={"#contact-us"} scroll={true}>
-                <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
+                <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition cursor-pointer">
                   Book A Call
                 </button>
               </Link>
@@ -87,28 +84,46 @@ const WhatWeAre = () => {
           }}
           className="hidden md:grid grid-cols-2"
         >
-          <div className="flex-1">
+          <div className="flex-1 relative">
+            <div className="flex flex-col p-[22px] gap-4 rounded-[10px] border-[0.5px] border-paragraph/30 bg-white shadow absolute top-[50%] -right-[70%]">
+              <p className="text-[15px] text-paragraph flex items-center gap-[5px] text-justify">
+                We partner with companies at every stage, from <br />
+                high‑growth start-ups to global enterprises​ ​
+                <br />
+                Tailored talent solutions rooted in real-world first hand
+                experience
+              </p>
+            </div>
             <div>
               <h2 className="font-bold mb-[18px] text-[40px] text-dark-text text-left">
-                What we are?
+                What We Do ?
               </h2>
               <div className="w-full">
-                <Image className="w-full" src={image1} alt="image 1" />
+                <Link
+                  href={
+                    "https://www.linkedin.com/in/garryburns6/?originalSubdomain=uk"
+                  }
+                >
+                  <Image className="w-full" src={image1} alt="image 1" />
+                </Link>
               </div>
-              <EllipsisText
-                charLimit={140}
-                text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-              />
-              <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
-                Request A Free Talent
-              </button>
+              <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
+              <Link
+                href={
+                  "https://calendly.com/lbarry-howyadoing/30min"
+                }
+              >
+                <button className="mt-6 px-6 py-3 bg-[#E43D30] cursor-pointer text-white rounded-xl font-medium hover:opacity-90 transition">
+                  Book A Free Talent Review
+                </button>
+              </Link>
             </div>
           </div>
           <div></div>
 
           <div></div>
           <div className="flex-1 relative">
-            <div className="flex flex-col p-[22px] gap-4 rounded-[10px] border-[0.5px] border-paragraph/30 bg-white shadow absolute top-[50%] -left-[45%]">
+            <div className="flex flex-col p-[22px] gap-4 rounded-[10px] border-[0.5px] border-paragraph/30 bg-white shadow absolute top-[50%] -left-[70%]">
               <h2 className="text-2xl font-semibold text-background">
                 What you get:
               </h2>
@@ -129,18 +144,15 @@ const WhatWeAre = () => {
             </div>
             <div>
               <h2 className="font-bold mb-[18px] text-[40px] text-dark-text text-right">
-                Our Capabilities
+                Pain Points We Solve
               </h2>
               <div className="w-full">
                 <Image className="w-full" src={image2} alt="image 2" />
               </div>
-              <EllipsisText
-                charLimit={140}
-                text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way"
-              />
+              <EllipsisText text="We don't just hire, we build companies. We deliver all-in-one talent acquisition solutions to help early stage companies achieve hiring success in a sustainable way" />
               <div className="flex justify-end">
                 <Link href={"#contact-us"} scroll={true}>
-                  <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition">
+                  <button className="mt-6 px-6 py-3 bg-[#E43D30] text-white rounded-xl font-medium hover:opacity-90 transition cursor-pointer">
                     Book A Call
                   </button>
                 </Link>
