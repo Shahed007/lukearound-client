@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="bg-[#FFFFFF] ">
+    <div className="bg-[#d2e7ec]">
       <Navbar />
       {children}
       <Footer />

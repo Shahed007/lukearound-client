@@ -20,28 +20,32 @@ const Navbar = () => {
         <Link href={"/"}>
           <Image height={50} src={logo} alt="Logo" />
         </Link>
-        <nav className="md:block hidden py-[18px] bg-black/0 border border-white shadow rounded-xl   px-[54px]">
-          <ul className="inline-flex  gap-2.5 text-base">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  className={` duration-200 ${
-                    pathName === item.href
-                      ? "text-primary"
-                      : "text-[#050505] hover:text-primary"
-                  }`}
-                  href={item.href}
-                  scroll={true}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+
+        {/* Updated Nav Buttons */}
+        <nav className="md:flex hidden px-6 py-4 space-x-4">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              scroll={true}
+              className={`px-6 py-2 rounded-lg border transition duration-200 text-white ${
+                pathName === item.href
+                  ? "bg-gradient-to-r from-red-500 via-red-600 to-red-700 border-transparent"
+                  : "bg-gradient-to-r from-red-400 via-red-500 to-red-600 border-transparent hover:from-red-500 hover:via-red-600 hover:to-red-700"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
+
         <div className="flex items-center gap-6">
           <div className="sm:block hidden">
-            <Link href={"#contact-us"} scroll={true} className="btn btn-primary">
+            <Link
+              href={"#contact-us"}
+              scroll={true}
+              className="btn btn-primary"
+            >
               Book A Call
             </Link>
           </div>

@@ -42,7 +42,7 @@ body {
   background: linear-gradient(
       0deg,
       rgba(249, 249, 255, 0) 38.32%,
-      rgba(0, 161, 241, 0.5) 100.31%
+      rgba(210, 231, 236, 1) 100.31%
     ),
     #f9f9ff;
 }
@@ -50,7 +50,7 @@ body {
 .linear-background-marquee {
   background: linear-gradient(
     to bottom,
-    rgba(249, 249, 255, 0) 48%,
-    /* transparent top half */ #00a1f1 128.54% /* solid blue at bottom */
+    rgba(249, 249, 255, 0) 38.32%,
+    /* transparent top half */  #d2e7ec 100.31% /* solid blue at bottom */
   );
 }

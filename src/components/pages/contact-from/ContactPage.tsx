@@ -2,11 +2,12 @@
 
 import type React from "react";
 import { useState, useEffect } from "react";
-import { MapPin, Phone, Mail, Clock, ChevronDown, Send } from "lucide-react";
+import { Mail, Clock, ChevronDown, Send } from "lucide-react";
 import Image from "next/image";
 import image from "@/assets/contact-image.png";
 import { motion, useAnimation, AnimatePresence, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { toast } from "sonner";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -51,11 +52,38 @@ export function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
+    try {
+      const res = await fetch(
+        "https://luckaround-mail-server.vercel.app/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+      const result = await res.json();
+      if (res.ok) {
+        toast.success("Form submitted successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          industry: "",
+          yourAge: "",
+          growthForecast: "",
+          projectTimeline: "",
+          needs: [],
+          message: "",
+        });
+      } else {
+        toast.error(result.message || "Something went wrong");
+      }
+    } catch (error) {
+      console.error("❌ Submission failed:", error);
+      toast.error("Error submitting form!");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants: Variants = {
@@ -180,7 +208,7 @@ export function ContactForm() {
         <motion.button
           type="button"
           onClick={() => setOpenSelect(isOpen ? null : name)}
-          className="w-full mt-1 px-3 py-2 bg-[#082B47] border border-[#D2D1D1] text-[#D2D1D1] placeholder:text-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D2D1D1] flex items-center justify-between"
+          className="w-full mt-1 px-3 py-2 bg-[#082B47] border border-[#D2D1D1] text-[#D2D1D1] placeholder:text-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D2D1D1] flex items-center justify-between cursor-pointer"
           whileHover={{
             scale: 1.02,
             borderColor: "#ffffff",
@@ -278,13 +306,13 @@ export function ContactForm() {
             {/* Contact Details */}
             <div className="space-y-4">
               {[
-                {
-                  icon: MapPin,
-                  text: "123 Business District, San Francisco, CA 94105",
-                },
-                { icon: Phone, text: "+1 (555) 123-4567" },
-                { icon: Mail, text: "hello@talentforge.com" },
-                { icon: Clock, text: "Mon-Fri: 9AM-6PM PST" },
+                // {
+                //   icon: MapPin,
+                //   text: "123 Business District, San Francisco, CA 94105",
+                // },
+                // { icon: Phone, text: "+447476981178" },
+                { icon: Mail, text: "Contact@HowYaDoing.io" },
+                { icon: Clock, text: "Mon-Fri: 9AM - 8PM UK Time (London)" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -379,22 +407,22 @@ export function ContactForm() {
               {/* Email */}
               <motion.div variants={itemVariants}>
                 <label
-                    htmlFor="email"
-                    className="block text-white text-md font-bold mb-1"
-                  >
-                    Email
-                  </label>
-                  <motion.input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData((prev) => ({ ...prev, email: e.target.value }))
-                    }
-                    className="w-full px-3 py-2 bg-[#082B47] border border-[#D2D1D1] text-[#D2D1D1] placeholder:text-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D2D1D1]"
-                    placeholder="john@example.com"
-                    whileFocus={{ scale: 1.02, borderColor: "#ffffff" }}
-                  />
+                  htmlFor="email"
+                  className="block text-white text-md font-bold mb-1"
+                >
+                  Email
+                </label>
+                <motion.input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData((prev) => ({ ...prev, email: e.target.value }))
+                  }
+                  className="w-full px-3 py-2 bg-[#082B47] border border-[#D2D1D1] text-[#D2D1D1] placeholder:text-gray-400 rounded-md focus:outline-none focus:ring-1 focus:ring-[#D2D1D1]"
+                  placeholder="john@example.com"
+                  whileFocus={{ scale: 1.02, borderColor: "#ffffff" }}
+                />
               </motion.div>
 
               {/* Industry */}

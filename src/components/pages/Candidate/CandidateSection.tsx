@@ -1,11 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { easeOut } from "framer-motion"; // ✅ import easing
-
-import EmployerBrandingSection from "../home/employee/EmployeBrandingSection";
-import LiveOpportunities from "../liveOpurtunuites/liveOpertunites";
-import SuccessStories from "../home/successStories/successStories";
+import { easeOut, motion } from "framer-motion";
+import CopyEmployerBrandingSection from "../home/employee/employe2";
 
 // Different animation variants for variety
 const fadeInUp = {
@@ -47,7 +42,7 @@ const scaleIn = {
 
 const CandidateSection = () => {
   return (
-    <div className="bg-white" id="candidates">
+    <div className="bg-[#d2e7ec]" id="candidates">
       {/* First section - fadeInUp */}
       <motion.div
         initial="hidden"
@@ -55,11 +50,11 @@ const CandidateSection = () => {
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUp}
       >
-        <EmployerBrandingSection />
+        <CopyEmployerBrandingSection />
       </motion.div>
 
       {/* Second section - different animation for variety */}
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -67,17 +62,17 @@ const CandidateSection = () => {
         transition={{ delay: 0.2 }}
       >
         <LiveOpportunities />
-      </motion.div>
+      </motion.div> */}
 
       {/* Third section - another variation */}
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={scaleIn}
       >
         <SuccessStories />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
